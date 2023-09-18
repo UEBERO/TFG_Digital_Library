@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Nav Bar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #f00;
+}
+
+.active {
+  color: #f00;
+}
+
+#menu-box {
+  display: none;
+}
+
+#menu-bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #menu-box {
+    display: block;
+    cursor: pointer;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  li {
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  #menu-box.active + ul {
+    display: flex;
+  }
+}
+
+/* Estilos para el título de la página */
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Boton para agregar articulos/ejercicios */
+
+a[href="formulario_articulo.php"] {
+  display: block;
+  margin: 40px auto;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px;
+  background-color: #FF4136;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+a[href="formulario_articulo.php"]:hover {
+  background-color: #c00;
+}
+
+/* Articulos / Ejercicios */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px
+  
+}
+
+button{
+  background-color: #FF4136;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover{
+  background-color: #c00;
+}
+
+/* rutinas */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2em;
+}
+
+#grupo_muscular {
+  font-size: 1.1em;
+  padding: 5px;
+  margin: 15px 0;
+}
+
+input[type="submit"] {
+  font-size: 1.1em;
+  background-color: #FF4136;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #c00;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+table, th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  form {
+      width: 100%;
+  }
+
+  label, #grupo_muscular {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+.resultados {
+  background-color: #b4afaf;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.resultado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.resultado:last-child {
+  margin-bottom: 0;
+}
+
+.resultado span {
+  font-weight: bold;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #bb1f1f;
+  color: white;
+}
